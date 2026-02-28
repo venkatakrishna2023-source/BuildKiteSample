@@ -1,0 +1,13 @@
+steps:
+  - label: "Build Static Site"
+    command: |
+      echo "Running Buildkite Build"
+      mkdir output
+      copy index.html output\
+    agents:
+      queue: "windows"
+
+  - label: "Show Output"
+    command: "dir output"
+    agents:
+      queue: "windows"
