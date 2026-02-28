@@ -3,11 +3,11 @@ steps:
     command: |
       echo "Running Buildkite Build"
       mkdir output
-      copy index.html output\
+      xcopy index.html output\ /Y
     agents:
       queue: "windows"
 
-  - label: "Show Output"
+  - label: "List Output"
     command: "dir output"
     agents:
       queue: "windows"
