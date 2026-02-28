@@ -1,13 +1,11 @@
 steps:
-  - label: "Build Static Site"
+  - label: "Buildkite Basic Test"
     command: |
-      echo "Running Buildkite Build"
-      mkdir output
-      xcopy index.html output\ /Y
-    agents:
-      queue: "windows"
-
-  - label: "List Output"
-    command: "dir output"
+      echo =====================================
+      echo   Buildkite CI is Working Successfully
+      echo =====================================
+      echo.
+      echo Listing project files:
+      dir
     agents:
       queue: "windows"
